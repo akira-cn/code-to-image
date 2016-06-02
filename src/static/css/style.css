@@ -12,6 +12,15 @@ textarea {
   font-size: 18px;
 }
 
+#nav {
+  padding: 6px;
+}
+
+#nav a {
+  text-decoration: none;
+  margin: 0 5px;
+}
+
 #code {
   width: 640px;
   position: absolute;

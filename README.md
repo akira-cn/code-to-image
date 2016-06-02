@@ -10,9 +10,9 @@ Paste blocks of code to textarea and **press Ctrl+D** to show image.
 
 ## The CSS Syntax
 
-CSS are supported via extensions. You should add `?lang=css` as the url's query string to specify the CSS syntax.
+CSS are supported via extensions. You should add `#css` as the url's hash to specify the CSS syntax.
 
-Example: [?lang=css](http://code2img.test.h5jun.com/?lang=css)
+Example: [#css](http://code2img.test.h5jun.com/#css)
 
 ## License
 
