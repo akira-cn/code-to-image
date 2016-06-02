@@ -59,22 +59,15 @@
     }, 0);
   }
 
-  function debounce(fn, delay){
-    var timer;
-    return function(){
-      var that = this, args = [].slice.call(arguments);
-
-      clearTimeout(timer);
-      timer = setTimeout(function(){
-        fn.apply(that, args);
-      }, delay);
-    };
-  }
-
-  $('#text-code').on('input', debounce(function(){
-    var text = textCode.value.trim();
-
-    text && generateCode(text);
-  }, 300));
+  $(window).keydown(function(evt){
+    if(evt.ctrlKey && evt.keyCode === 68){
+      var text = textCode.value.trim();
+      generateCode(text || 'Paste your code first!');      
+    }else{
+      if(evt.keyCode === 27){
+        code.innerHTML = '';
+      }
+    }
+  });
 
 })(jQuery, html2canvas, prettyPrint);
