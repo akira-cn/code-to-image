@@ -14,9 +14,9 @@
       var h = $('#code').height();
 
       var canvas = document.createElement('canvas');
-      canvas.width = w * 2 + 40;
+      canvas.width = w * 2;
       canvas.height = h * 2;
-      canvas.style.width = w + 20 + 'px';
+      canvas.style.width = w + 'px';
       canvas.style.height = h + 'px';
       var context = canvas.getContext('2d');
       context.scale(2,2);
