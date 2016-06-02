@@ -6,7 +6,7 @@ Paste blocks of code to textarea and **press Ctrl+D** to show image.
 
 ## Example
 
-[See an example](http://code2img.test.h5jun.com/)
+[http://code2img.test.h5jun.com](http://code2img.test.h5jun.com/#)
 
 ## Default languages
 
