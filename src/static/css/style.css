@@ -23,6 +23,11 @@ textarea {
   margin-bottom: 16px;
 }
 
+#code pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
 #code div {
   background: rgba(0,0,0,0.5);
   position: absolute;
