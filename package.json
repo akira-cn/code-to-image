@@ -1,0 +1,20 @@
+{
+  "name": "code-to-image",
+  "version": "0.1.0",
+  "description": "Transform text code to a highlighted jpeg base64",
+  "main": "src/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd src && http-server -c-1"
+  },
+  "keywords": [
+    "code",
+    "image",
+    "base64"
+  ],
+  "devDependencies": {
+    "http-server": "^0.9.0"
+  },
+  "author": "akira-cn",
+  "license": "Apache License 2.0"
+}
