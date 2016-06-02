@@ -27,7 +27,7 @@
           //document.body.appendChild(canvas);
           //console.log(canvas.toDataURL());
           var img = new Image();
-          img.src = canvas.toDataURL('image/png');
+          img.src = canvas.toDataURL('image/jpeg');
           img.style.zoom = '0.5';
 
           var a = document.createElement('a');
