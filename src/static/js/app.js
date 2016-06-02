@@ -101,6 +101,7 @@
           var img = new Image();
           img.src = canvas.toDataURL('image/jpeg');
           img.style.zoom = '0.5';
+          img.style.maxWidth = '100%';
 
           var a = document.createElement('a');
           a.href = img.src;
@@ -130,6 +131,11 @@
       });
     }, 0);
   }
+
+  $('#nav img').click(function(){
+    var text = textCode.value;
+    generateCode(text || 'Paste your code first!');  
+  });
 
   $(window).keydown(function(evt){
     if(evt.ctrlKey && evt.keyCode === 68){

@@ -16,6 +16,11 @@ textarea {
   padding: 6px;
 }
 
+#nav img {
+  vertical-align: middle;
+  cursor: pointer;
+}
+
 #nav a {
   text-decoration: none;
   margin: 0 5px;
