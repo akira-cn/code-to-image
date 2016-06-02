@@ -8,11 +8,15 @@ Paste blocks of code to textarea and **press Ctrl+D** to show image.
 
 [See an example](http://code2img.test.h5jun.com/)
 
-## The CSS Syntax
+## Default languages
 
-CSS are supported via extensions. You should add `#css` as the url's hash to specify the CSS syntax.
+Default languages included bash; C; C++; C#; HTML; Java; JavaScript; XML; Perl; Python; Ruby; PHP;
 
-Example: [#css](http://code2img.test.h5jun.com/#css)
+## Extensions
+
+Other languages are supported via extensions:
+
+[Apollo](http://code2img.test.h5jun.com/#apollo); [Basic](http://code2img.test.h5jun.com/#basic); [Clojure](http://code2img.test.h5jun.com/#clojure); [CSS](http://code2img.test.h5jun.com/#css); [Dart](http://code2img.test.h5jun.com/#dart); [Erlang](http://code2img.test.h5jun.com/#erlang); [Go](http://code2img.test.h5jun.com/#go); [Haskell](http://code2img.test.h5jun.com/#hs); [Lasso](http://code2img.test.h5jun.com/#lasso); [Lisp, Scheme](http://code2img.test.h5jun.com/#lisp); [Llvm](http://code2img.test.h5jun.com/#llvm); [Logtalk](http://code2img.test.h5jun.com/#logtalk); [Lua](http://code2img.test.h5jun.com/#lua); [Matlab](http://code2img.test.h5jun.com/#maltab); [MLs: F#, Ocaml,SML;](http://code2img.test.h5jun.com/#ml) [Mumps](http://code2img.test.h5jun.com/#mumps); [Nemerle](http://code2img.test.h5jun.com/#nemerle); [Pascal](http://code2img.test.h5jun.com/#pascal); [Protocol buffers](http://code2img.test.h5jun.com/#protocol); [R, S](http://code2img.test.h5jun.com/#r); [RD](http://code2img.test.h5jun.com/#rd); [Rust](http://code2img.test.h5jun.com/#rust); [Scala](http://code2img.test.h5jun.com/#scala); [SQL](http://code2img.test.h5jun.com/#sql); [Swift](http://code2img.test.h5jun.com/#swift); [TCL](http://code2img.test.h5jun.com/#tcl); [Latek](http://code2img.test.h5jun.com/#latek); [Visual Basic](http://code2img.test.h5jun.com/#vb); [VHDL](http://code2img.test.h5jun.com/#vhdl); [Wiki](http://code2img.test.h5jun.com/#wiki); [XQ](http://code2img.test.h5jun.com/#xq); [YAML](http://code2img.test.h5jun.com/#yaml)
 
 ## License
 

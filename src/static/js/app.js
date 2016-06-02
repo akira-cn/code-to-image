@@ -9,7 +9,39 @@
   }
 
   var srcMap = {
-    'css': 'lang-css.js'
+    'apollo': 'lang-apollo.js',
+    'basic': 'lang-basic.js',
+    'clojure': 'lang-clj.js',
+    'css': 'lang-css.js',
+    'dart': 'lang-dart.js',
+    'erlang': 'lang-erlang.js',
+    'go': 'lang-go.js',
+    'haskell': 'lang-hs.js',
+    'lasso': 'lang-lasso.js',
+    'lisp': 'lang-lisp.js',
+    'scheme': 'lang-lisp.js',
+    'llvm': 'lang-llvm.js',
+    'logtalk': 'lang-logtalk.js',
+    'lua': 'lang-lua.js',
+    'matlab': 'lang-matlab.js',
+    'ml': 'lang-ml.js',
+    'mumps': 'lang-mumps',
+    'nemerle': 'lang-n.js',
+    'pascal': 'lang-pascal.js',
+    'protocol': 'lang-proto.js',
+    'r': 'lang-r.js',
+    'rd': 'lang-rd.js',
+    'rust': 'lang-rust.js',
+    'scala': 'lang-scala.js',
+    'sql': 'lang-sql.js',
+    'swift': 'lang-swift.js',
+    'tcl': 'lang-tcl.js',
+    'latek': 'lang-tex.js',
+    'vb': 'lang-vb.js',
+    'vhdl': 'lang-vhdl.js',
+    'wiki': 'lang-wiki.js',
+    'xq': 'lang-xq.js',
+    'yaml': 'lang-yaml.js'
   };
   function loadPlugin(lang){
     var js = srcMap[lang.toLowerCase()];  
@@ -30,7 +62,7 @@
 
     if(target.tagName === 'A'){
       lang = target.innerHTML.toLowerCase();
-      if(lang === 'default') lang = '';
+      if(lang === 'default' || lang === 'more') lang = '';
       if(lang) loadPlugin(lang);
     }
   });

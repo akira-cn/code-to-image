@@ -1,6 +1,6 @@
 {
   "name": "code-to-image",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Transform blocks of code to a highlighted jpeg base64 image.",
   "main": "src/index.html",
   "scripts": {
