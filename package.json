@@ -1,7 +1,7 @@
 {
   "name": "code-to-image",
   "version": "0.1.0",
-  "description": "Transform text code to a highlighted jpeg base64",
+  "description": "Transform blocks of code to a highlighted jpeg base64",
   "main": "src/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
