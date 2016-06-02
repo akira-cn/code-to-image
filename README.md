@@ -1,6 +1,6 @@
 # Code to Image
 
-Transform blocks of code to a highlighted jpeg base64.
+Transform blocks of code to a highlighted jpeg base64 image.
 
 ## Example
 
