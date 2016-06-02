@@ -12,7 +12,7 @@ Paste blocks of code to textarea and **press Ctrl+D** to show image.
 
 CSS are supported via extensions. You should add `#css` to the hash of the url to specify the CSS syntax.
 
-Example: [#css](http://code2img.test.h5jun.com/)
+Example: [#css](http://code2img.test.h5jun.com/#css)
 
 ## License
 
