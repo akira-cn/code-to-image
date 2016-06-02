@@ -8,6 +8,12 @@ Paste blocks of code to textarea and **press Ctrl+D** to show image.
 
 [See an example](http://code2img.test.h5jun.com/)
 
+## The CSS Syntax
+
+CSS are supported via extensions. You should add `#css` to the hash of the url to specify the CSS syntax.
+
+Example: [#css](http://code2img.test.h5jun.com/)
+
 ## License
 
 [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)

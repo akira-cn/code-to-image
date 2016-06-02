@@ -6,7 +6,13 @@
   var textCode = document.getElementById('text-code');
 
   function generateCode(text){
-    code.innerHTML = '<pre class="prettyprint"><code>' + text.replace(/</g, '&lt;').replace(/>/g,'&gt;') + '</code></pre>';
+    var codeClass = 'prettyprint';
+    var hash = location.hash;
+    if(hash){
+      codeClass += ' lang-' + hash.slice(1);
+    }
+    code.innerHTML = '<pre class="' + codeClass + '"><code>' + text.replace(/</g, '&lt;').replace(/>/g,'&gt;') + '</code></pre>';
+
     prettyPrint();
 
     setTimeout(function(){
