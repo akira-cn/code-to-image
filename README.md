@@ -24,4 +24,4 @@ Thanks to [code-prettify](https://github.com/google/code-prettify) and [html2can
 
 ## License (Multi-licensing)
 
-[Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0) [LICENSE]
+[Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0) [LICENSE](LICENSE)
