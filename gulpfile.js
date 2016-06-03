@@ -65,7 +65,7 @@ function compile(src){
       
       return new Promise(function(resolve, reject){
         require('checksum').file(path, function(err, sum){
-          var cdnFile = 'static/!ssl' + sum.slice(20) + '/' + compressed;
+          var cdnFile = '!ssl' + sum.slice(20) + '/' + compressed;
 
           cdnBucket.putFile(cdnFile, path, function(err, reply){
             if(!err){
