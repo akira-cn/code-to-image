@@ -33,24 +33,21 @@ function compile(src){
   if(ext === '.js'){
     contents = uglifyJS.minify(path).code;
     if(name === 'app'){
-      if(cdnBucket){
-        var extensions = contents.match(/lang-[a-z]+?\.js/g);
-        var promises = [];
-        var prefix = '/static/module/code-prettify/';
+      var extensions = contents.match(/lang-[a-z]+?\.js/g);
+      var promises = [];
 
-        //console.log(extensions);
-        extensions.forEach(function(extension){
-          var src = prefix + extension;
-          promises.push(compile(src).then(function(res){
-            contents = contents.replace(extension, res);
-          }));
-        });
-        prePromise = Promise.all(promises).then(function(){
-          contents = contents.replace(prefix, '');
-        });
-      }else{
-        contents = contents.replace(/(lang-[a-z]+?)(\.js)/g, '$1.min$2');
-      }
+      var prefix = '/static/module/code-prettify/';
+
+      //console.log(extensions);
+      extensions.forEach(function(extension){
+        var src = prefix + extension;
+        promises.push(compile(src).then(function(res){
+          contents = contents.replace(extension, res);
+        }));
+      });
+      prePromise = Promise.all(promises).then(function(){
+        contents = contents.replace(prefix, '');
+      });
     }
   }else if(ext === '.css'){
     var cssText = fs.readFileSync(path);
