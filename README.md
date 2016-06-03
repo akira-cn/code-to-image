@@ -24,15 +24,11 @@ npm install
 npm start
 ```
 
-Visit http://localhost:8080.
-
 ## Compile & Release
 
 ```bash
 npm run compile
 ```
-
-Publish all files in `dist` directory to your own http-server.
 
 ## Default languages
 
