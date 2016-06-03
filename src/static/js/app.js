@@ -25,7 +25,7 @@
     'lua': 'lang-lua.js',
     'matlab': 'lang-matlab.js',
     'ml': 'lang-ml.js',
-    'mumps': 'lang-mumps',
+    'mumps': 'lang-mumps.js',
     'nemerle': 'lang-n.js',
     'pascal': 'lang-pascal.js',
     'protocol': 'lang-proto.js',
@@ -48,7 +48,7 @@
 
     if(typeof js === 'string'){
       var script = document.createElement('script');
-      script.src = '/static/js/' + js;
+      script.src = '/static/module/code-prettify/' + js;
       document.body.appendChild(script);
     } 
 
