@@ -1,7 +1,7 @@
 {
   "name": "code-to-image",
-  "version": "0.2.0",
-  "description": "Transform blocks of code to a highlighted jpeg base64 image.",
+  "version": "0.2.1",
+  "description": "Convert blocks of code to a highlighted jpeg base64 image.",
   "main": "src/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,7 +10,10 @@
   "keywords": [
     "code",
     "image",
-    "base64"
+    "base64",
+    "jpeg",
+    "html2canvas",
+    "highlight"
   ],
   "devDependencies": {
     "http-server": "^0.9.0"
