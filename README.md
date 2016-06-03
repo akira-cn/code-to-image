@@ -10,6 +10,30 @@ It is much better than screen shot since you can pick a single image from **very
 
 Paste blocks of code to textarea and **press Ctrl+D** to pick image.
 
+## Installation
+
+```bash
+git clone https://github.com/akira-cn/code-to-image.git
+cd code-to-image
+npm install
+```
+
+## Development
+
+```bash
+npm start
+```
+
+Visit http://localhost:8080.
+
+## Compile & Release
+
+```bash
+npm run compile
+```
+
+Publish all files in `dist` directory to your own http-server.
+
 ## Default languages
 
 Default languages included bash; C; C++; C#; HTML; Java; JavaScript; XML; Perl; Python; Ruby; PHP;
