@@ -96,8 +96,6 @@
       html2canvas(document.querySelector('#code'), {
         canvas: canvas,
         onrendered: function(canvas) {
-          //document.body.appendChild(canvas);
-          //console.log(canvas.toDataURL());
           var img = new Image();
           img.src = canvas.toDataURL('image/jpeg');
           img.style.zoom = '0.5';
@@ -135,6 +133,61 @@
   $('#nav img').click(function(){
     var text = textCode.value;
     generateCode(text || 'Paste your code first!');  
+  });
+
+  $('#text-code').keydown(function(evt){
+    var keyCode = evt.keyCode;
+
+    if(keyCode !== 9 && keyCode !== 13 & keyCode !== 221) return;
+
+    var text = $(this).val();
+    var start = $(this).get(0).selectionStart;
+    var end = $(this).get(0).selectionEnd;
+
+    if(keyCode === 9) { //handle tab
+      evt.preventDefault();
+
+      // set textarea value to: text before caret + tab + text after caret
+      $(this).val(text.substring(0, start)
+                  + '    '
+                  + text.substring(end));
+
+      // put caret at right position again
+      $(this).get(0).selectionStart =
+      $(this).get(0).selectionEnd = start + 4;
+    }else if(keyCode === 13){  //handle enter
+      evt.preventDefault();
+
+      var lines = text.substring(0, start).split('\n');
+      var currentLine = lines[lines.length - 1];
+      var spaces = (/^\s+/.exec(currentLine) || [''])[0];
+
+      $(this).val(text.substring(0, start)
+                  + '\n' + spaces
+                  + text.substring(end));
+
+      $(this).get(0).selectionStart =
+      $(this).get(0).selectionEnd = start + spaces.length + 1;
+    }else if(keyCode === 221){  //handle {
+      evt.preventDefault();
+
+      var lines = text.substring(0, start).split('\n');
+      var currentLine = lines[lines.length - 1];
+      var spaces = (/^\s+$/.exec(currentLine) || [''])[0];
+      var backspace = 0;
+
+      if(spaces){
+        backspace = Math.min(spaces.length, 4);
+        spaces = spaces.slice(0, -4);
+      }
+
+      $(this).val(text.substring(0, start).replace(/^\s+$/m, spaces)
+                  + '}'
+                  + text.substring(end));      
+
+      $(this).get(0).selectionStart =
+      $(this).get(0).selectionEnd = start - backspace + 1;
+    }
   });
 
   $(window).keydown(function(evt){
