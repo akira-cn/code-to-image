@@ -105,7 +105,6 @@ gulp.task('default', function() {
 
         var promises = [];
 
-        //处理外链 css
         var links = $('link');
         for(var i = 0; i < links.length; i++){
           var link = $(links[i]);
