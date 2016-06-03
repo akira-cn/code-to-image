@@ -1,6 +1,6 @@
 # Code to Image
 
-Code to Image converts your blocks of code to a highlighted jpeg base64 image. And you can share it to any code-unfriendly website —— Such website doesn't support markdown or `<pre><code>` tag or anything else that can make you post an article contains blocks of code in it.
+Code to Image converts your blocks of code to a highlighted jpeg base64 image. And you can share it to any code-unfriendly website —— Such website doesn't support markdown or `<pre><code>` tag or anything else that can make your post contains any blocks of code in it.
 
 It is much better than screen shot since you can pick a single image from **very large code files**. More than 40 programming languages can be highlighted and picked.
 
