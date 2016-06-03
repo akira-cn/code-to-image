@@ -22,6 +22,6 @@ Other languages are supported via extensions:
 
 Thanks to [code-prettify](https://github.com/google/code-prettify) and [html2canvas](https://github.com/niklasvh/html2canvas).
 
-## License
+## License (Multi-licensing)
 
-[Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)
+[Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0) [LICENSE]
