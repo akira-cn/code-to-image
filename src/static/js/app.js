@@ -1,6 +1,6 @@
   /* global jQuery, html2canvas, prettyPrint*/
 
-(function($){
+(function($, html2canvas, PR){
   var hash = location.hash.slice(1).toLowerCase(),
       lang;
 
@@ -79,7 +79,7 @@
 
     code.innerHTML = '<pre class="' + codeClass + '"><code>' + text.replace(/</g, '&lt;').replace(/>/g,'&gt;') + '</code></pre>';
 
-    prettyPrint();
+    PR.prettyPrint();
 
     setTimeout(function(){
       var w = $('#code').width();
@@ -205,4 +205,4 @@
     }
   });
 
-})(jQuery, html2canvas, prettyPrint);
+})(jQuery, html2canvas, PR);
