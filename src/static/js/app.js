@@ -138,6 +138,10 @@
   $('#text-code').keydown(function(evt){
     var keyCode = evt.keyCode;
 
+    if(keyCode === 68 && evt.ctrlKey){
+      evt.preventDefault(); //prevent deletion
+      return;
+    }
     if(keyCode !== 9 && keyCode !== 13 & keyCode !== 221) return;
 
     var text = $(this).val();
