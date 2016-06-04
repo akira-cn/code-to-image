@@ -15,12 +15,13 @@ textarea {
 
 #nav {
   padding: 6px;
+  line-height: 28px;
 }
 
 #nav img {
   vertical-align: middle;
   cursor: pointer;
-  margin-right: 10px;
+  margin: 0 10px 6px 0;
 }
 
 #nav a {
