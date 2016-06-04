@@ -100,6 +100,7 @@
           img.src = canvas.toDataURL('image/jpeg');
           img.style.zoom = '0.5';
           img.style.maxWidth = '100%';
+          img.style.maxHeight = '100%';
 
           var a = document.createElement('a');
           a.href = img.src;

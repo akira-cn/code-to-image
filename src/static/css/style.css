@@ -42,6 +42,7 @@ textarea {
   font-size: 18px;
   left: 0;
   top: 0;
+  z-index: 99;
 }
 
 #code pre {
