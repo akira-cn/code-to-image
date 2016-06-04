@@ -20,11 +20,19 @@ textarea {
 #nav img {
   vertical-align: middle;
   cursor: pointer;
+  margin-right: 10px;
 }
 
 #nav a {
   text-decoration: none;
   margin: 0 5px;
+}
+
+/*github stars*/
+#nav iframe {
+  position: relative;
+  margin-left: 10px;
+  vertical-align: middle;
 }
 
 #code {

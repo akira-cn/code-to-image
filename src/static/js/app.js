@@ -1,4 +1,4 @@
-  /* global jQuery, html2canvas, prettyPrint*/
+  /* global jQuery, html2canvas, PR*/
 
 (function($, html2canvas, PR){
   var hash = location.hash.slice(1).toLowerCase(),
