@@ -37,12 +37,11 @@ textarea {
 }
 
 #code {
-  min-width: 1280px;
+  min-width: 640px;
   position: absolute;
-  font-size: 36px;
+  font-size: 18px;
   left: 0;
   top: 0;
-  zoom: 0.5;
   z-index: 99;
 }
 
