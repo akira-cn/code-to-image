@@ -37,9 +37,9 @@ textarea {
 }
 
 #code {
-  min-width: 640px;
+  width: 1280px;
   position: absolute;
-  font-size: 18px;
+  font-size: 36px;
   left: 0;
   top: 0;
   z-index: 99;
