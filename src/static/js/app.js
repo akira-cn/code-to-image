@@ -88,8 +88,6 @@
       var canvas = document.createElement('canvas');
       canvas.width = w * 2;
       canvas.height = h * 2;
-      canvas.style.width = w + 'px';
-      canvas.style.height = h + 'px';
       var context = canvas.getContext('2d');
       context.scale(2,2);
 
@@ -116,6 +114,7 @@
           container.appendChild(closeBtn);
           
           code.innerHTML = '';
+          code.style.zoom = '1.0';
           code.appendChild(container);
 
           $(closeBtn).click(function(){
@@ -202,6 +201,7 @@
     }else{
       if(evt.keyCode === 27){
         code.innerHTML = '';
+        code.style.zoom = '';
       }
     }
   });
