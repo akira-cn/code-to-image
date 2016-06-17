@@ -69,6 +69,55 @@
 
   var code = document.getElementById('code');
   var textCode = document.getElementById('text-code');
+  var settings = localStorage.getItem('settings') 
+    || {theme: 'dark', 'width': '1280px', 'fontSize': '36px'};
+
+  if(typeof settings === 'string'){
+    settings = JSON.parse(settings);
+  }
+
+  function parseProps(propStr){
+    var props = propStr.trim().split(';');
+    var ret = {};
+
+    for(var i = 0; i < props.length; i++){
+      if(props[i]){
+        var pair = props[i].split(':');
+        ret[pair[0].trim()] = pair[1].trim();
+      }
+    }
+    return ret;
+  }
+
+  //initialize settings
+  $('.settings > li > a').each(function(i, o){
+    var prop = $(o).data('opt');
+    prop = parseProps(prop);
+
+    for(var key in prop){
+      if(settings[key] !== prop[key]){
+        return;
+      }
+    }
+
+    $(o).addClass('selected');
+  });
+
+  $('.settings').click(function(evt){
+    evt.preventDefault();
+    var target = evt.target;
+    if(target.tagName === 'A'){
+      var prop = $(target).data('opt');
+      prop = parseProps(prop);
+
+      $.extend(settings, prop);
+
+      $(target).parent().parent().find('a').removeClass('selected');
+      $(target).addClass('selected');
+
+      localStorage.setItem('settings', JSON.stringify(settings));
+    }
+  });
 
   function generateCode(text){
     var codeClass = 'prettyprint';
@@ -77,7 +126,8 @@
       codeClass += ' lang-' + lang;
     }
 
-    code.innerHTML = '<pre class="' + codeClass + '"><code>' + text.replace(/</g, '&lt;').replace(/>/g,'&gt;') + '</code></pre>';
+    $(code).css(settings);
+    code.innerHTML = '<pre class="' + settings.theme + ' ' + codeClass + '"><code>' + text.replace(/</g, '&lt;').replace(/>/g,'&gt;') + '</code></pre>';
 
     PR.prettyPrint();
 
@@ -86,10 +136,9 @@
       var h = $('#code').height();
 
       var canvas = document.createElement('canvas');
-      canvas.width = w * 2;
-      canvas.height = h * 2;
+      canvas.width = w;
+      canvas.height = h;
       var context = canvas.getContext('2d');
-      context.scale(2,2);
 
       html2canvas(document.querySelector('#code'), {
         canvas: canvas,
@@ -97,6 +146,7 @@
           var img = new Image();
           img.src = canvas.toDataURL('image/jpeg');
           img.style.zoom = '0.5';
+          img.style.minWidth = '640px';
           img.style.maxWidth = '100%';
           img.style.maxHeight = '100%';
 
