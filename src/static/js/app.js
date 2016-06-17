@@ -61,10 +61,10 @@
 
   $('#nav .languages').click(function(evt){
     var target = evt.target;
+    var _lang = $(target).data('lang');
 
-    if(target.tagName === 'A'){
-      lang = target.innerHTML.toLowerCase();
-      if(lang === 'more') return;
+    if(target.tagName === 'A' && _lang !== 'more'){
+      lang = _lang;
       if(lang === 'default') lang = '';
       if(lang) loadPlugin(lang);
       else $('#nav .languages').get(0).className = 'languages lang-default';
