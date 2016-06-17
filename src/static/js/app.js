@@ -151,7 +151,6 @@
           img.src = canvas.toDataURL('image/jpeg');
           img.style.width = canvas.width / 2 + 'px';
           img.style.minWidth = '640px';
-          img.style.maxWidth = '100%';
           img.style.maxHeight = '100%';
 
           var a = document.createElement('a');
