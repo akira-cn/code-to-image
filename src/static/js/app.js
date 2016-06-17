@@ -158,7 +158,7 @@
           var zoom = Math.max(0.5, 360 / img.width);
 
           $(img).css({
-            '-moz-transform': 'translate(-50%, -50%) scale(' + zoom + ', ' + zoom + ')',
+            //'-moz-transform': 'translate(-50%, -50%) scale(' + zoom + ', ' + zoom + ')',
             'zoom': zoom
           });
 
