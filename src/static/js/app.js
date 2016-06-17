@@ -50,20 +50,24 @@
       var script = document.createElement('script');
       script.src = '/static/module/code-prettify/' + js;
       document.body.appendChild(script);
-    } 
+    }
 
+    $('#nav .languages').get(0).className = 'languages lang-' + lang;
+    //only to load js file once.
     srcMap[lang] = true;
   }
 
-  if(lang) loadPlugin(lang);
+  if(lang) loadPlugin(lang); 
 
-  $('#nav').click(function(evt){
+  $('#nav .languages').click(function(evt){
     var target = evt.target;
 
     if(target.tagName === 'A'){
       lang = target.innerHTML.toLowerCase();
-      if(lang === 'default' || lang === 'more') lang = '';
+      if(lang === 'more') return;
+      if(lang === 'default') lang = '';
       if(lang) loadPlugin(lang);
+      else $('#nav .languages').get(0).className = 'languages lang-default';
     }
   });
 

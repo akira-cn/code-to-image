@@ -40,6 +40,19 @@ ul.languages {
   margin-right: 80px;
 }
 
+ul.languages.lang-default a[data-lang=default],
+ul.languages.lang-css a[data-lang=css],
+ul.languages.lang-erlang a[data-lang=erlang],
+ul.languages.lang-go a[data-lang=go],
+ul.languages.lang-haskell a[data-lang=haskell],
+ul.languages.lang-lisp a[data-lang=lisp],
+ul.languages.lang-lua a[data-lang=lua],
+ul.languages.lang-sql a[data-lang=sql],
+ul.languages.lang-swift a[data-lang=swift]
+{
+  font-size: 20px;
+}
+
 ul.settings, ul.settings li,
 ul.languages, ul.languages li {
   padding: 0;
