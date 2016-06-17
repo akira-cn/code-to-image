@@ -149,9 +149,18 @@
         onrendered: function(canvas) {
           var img = new Image();
           img.src = canvas.toDataURL('image/jpeg');
-          img.style.width = canvas.width / 2 + 'px';
-          img.style.minWidth = '640px';
-          img.style.maxHeight = '100%';
+
+          $(img).css({
+            'max-width': '100%',
+            'max-height': '100%'
+          });
+
+          var zoom = Math.max(0.5, 360 / img.width);
+
+          $(img).css({
+            '-moz-transform': 'translate(-50%, -50%) scale(' + zoom + ', ' + zoom + ')',
+            'zoom': zoom
+          });
 
           var a = document.createElement('a');
           a.href = img.src;
