@@ -37,7 +37,20 @@ textarea {
 }
 
 ul.languages {
-  margin-right: 80px;
+  margin-right: 20px;
+}
+
+ul.settings,
+ul.languages {
+  padding: 0;
+  font-size: 0;
+  display: inline;
+}
+
+ul.languages li,
+ul.settings li  {
+  font-size: 16px;
+  display: inline-block;
 }
 
 ul.languages.lang-default a[data-lang=default],
@@ -51,12 +64,6 @@ ul.languages.lang-sql a[data-lang=sql],
 ul.languages.lang-swift a[data-lang=swift]
 {
   font-size: 20px;
-}
-
-ul.settings, ul.settings li,
-ul.languages, ul.languages li {
-  padding: 0;
-  display: inline;
 }
 
 ul.settings li:not(:first-child) {
