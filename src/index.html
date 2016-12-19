@@ -24,19 +24,22 @@
       <li><a data-lang="more" href="https://github.com/akira-cn/code-to-image#extensions" target="_blank">More</a></li>
     </ul>
     <ul class="settings">
-      <li><a href="###" data-opt="theme:dark">Dark</a></li>
-      <li><a href="###" data-opt="theme:light">Light</a></li>
+      <li><input type="radio" value="dark" id="setting-theme-dark" name="setting-theme" checked="checked"/><label for="setting-theme-dark">Dark</label></li>
+      <li><input type="radio" value="light" id="setting-theme-light" name="setting-theme"/><label for="setting-theme-light">Light</label></li>
     </ul>
     <ul class="settings">
-      <li><a href="###" data-opt="width:1280px;fontSize:36px">1280</a></li>
-      <li><a href="###" data-opt="width:720px;fontSize:20px">720</a></li>
-      <li><a href="###" data-opt="width:480px;fontSize:14px">480</a></li>
+      <li><input type="radio" value="w1280" id="setting-width-w1280" name="setting-width" checked="checked"/><label for="setting-width-w1280">Large</label></li>
+      <li><input type="radio" value="w720" id="setting-width-w720" name="setting-width"/><label for="setting-width-w720">Medium</label></li>
+      <li><input type="radio" value="w480" id="setting-width-w480" name="setting-width"/><label for="setting-width-w480">Small</label></li>
+    </ul>
+    <ul class="settings">
+      <li><input type="radio" value="wrap" id="setting-format-wrap" name="setting-format" checked="checked"/><label for="setting-format-wrap">Wrap</label></li>
+      <li><input type="radio" value="nowrap" id="setting-format-nowrap" name="setting-format"/><label for="setting-format-nowrap">NoWrap</label></li>
     </ul>
     <iframe src="https://ghbtns.com/github-btn.html?user=akira-cn&repo=code-to-image&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
   </div>
   <textarea id="text-code" placeholder="Paste your blocks of code here and press 'Ctrl+D' to pick Image."></textarea>
 </body>
-<script src="/static/module/jquery/jquery-2.2.4.js"></script>
 <script src="/static/module/code-prettify/prettify.js"></script>
 <script src="/static/module/html2canvas/html2canvas.js"></script>
 <script src="/static/js/app.js"></script>

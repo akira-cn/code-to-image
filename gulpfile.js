@@ -31,6 +31,7 @@ function compile(src){
   var prePromise = Promise.resolve();
 
   if(ext === '.js'){
+    console.log(path);
     contents = uglifyJS.minify(path).code;
     if(name === 'app'){
       var extensions = contents.match(/lang-[a-z]+?\.js/g);

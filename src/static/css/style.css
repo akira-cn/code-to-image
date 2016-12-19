@@ -24,9 +24,15 @@ textarea {
   margin: 0 10px 6px 0;
 }
 
-#nav a {
+#nav a,
+#nav label {
   text-decoration: none;
   margin: 0 5px;
+}
+
+#nav label {
+  cursor: pointer;
+  user-select: none;
 }
 
 /*github stars*/
@@ -71,12 +77,17 @@ ul.settings li:not(:first-child) {
   padding-left: 5px;
 }
 
-ul.settings a.selected {
+ul.settings input {
+  display: none;
+}
+
+ul.settings input:checked+label {
   color: #f00;
 }
 
 #code {
-  width: 1280px;
+  /*width: 1280px;*/
+  min-width: 360px;
   position: absolute;
   font-size: 36px;
   left: 0;
@@ -85,10 +96,51 @@ ul.settings a.selected {
   background-color: #fff;
 }
 
-#code pre {
+#code pre.wrap{
   white-space: pre-wrap;
   word-wrap: break-word;
+}
+
+#code pre.nowrap{
+  white-space: pre;
+  width: 100%;
+}
+
+#code pre {
   margin: 0;
+  padding: 0;
+}
+
+#code pre.w1280{
+  min-width: 1280px;
+  font-size: 36px;
+}
+
+#code pre.w720{
+  min-width: 720px;
+  font-size: 20px;
+}
+
+#code pre.w480{
+  min-width: 480px;
+  font-size: 14px;
+}
+
+#code pre.w1280.wrap{
+  width: 1280px;
+}
+
+#code pre.w720.wrap{
+  width: 720px;
+}
+
+#code pre.w480.wrap{
+  width: 480px;
+}
+
+#code pre code{
+  margin: 0.5em;
+  display: inline-block;
 }
 
 #code div {
