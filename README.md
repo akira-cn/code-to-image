@@ -6,7 +6,7 @@ It is much better than screen shot since you can pick a single image from **very
 
 ## Example
 
-[http://code2img.test.h5jun.com](http://code2img.test.h5jun.com/#)
+[http://code2img.75team.com](http://code2img.75team.com/#)
 
 Paste blocks of code to textarea and **press Ctrl+D** to pick image.
 
